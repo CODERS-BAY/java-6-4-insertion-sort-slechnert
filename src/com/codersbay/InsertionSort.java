@@ -9,20 +9,22 @@ public class InsertionSort {
 
         int[] numbers = {5, 8, 3, 1, 6, 4, 3, 1};
 
-        int tmp = Integer.MIN_VALUE;
+        int tmp;
         int lengthUnsorted = numbers.length;
-        int currentMax = 0;
+        int startUnsorted = 1;
 
-        for (int i = 0; i < lengthUnsorted; i++) {
+        for (int i = startUnsorted; i < lengthUnsorted; i++) {
 
-            for (int j = 1; j < lengthUnsorted; j++) {
+            for (int j = i; j < lengthUnsorted && j > 0; j--) {
                 if (numbers[j] < numbers[j - 1]) {
                     tmp = numbers[j - 1];
                     numbers[j - 1] = numbers[j];
                     numbers[j] = tmp;
+
                 }
             }
         }
         System.out.println(Arrays.toString(numbers));
     }
+
 }
