@@ -9,6 +9,14 @@ public class InsertionSort {
 
         int[] numbers = {5, 8, 3, 1, 6, 4, 3, 1};
 
+
+        int[] sortedNumbers = insertionSort(numbers);
+        System.out.println(Arrays.toString(sortedNumbers));
+
+    }
+
+    private static int[] insertionSort(int[] numbers) {
+
         int tmp;
         int lengthUnsorted = numbers.length;
         int startUnsorted = 1;
@@ -24,7 +32,6 @@ public class InsertionSort {
                 }
             }
         }
-        System.out.println(Arrays.toString(numbers));
+        return numbers;
     }
-
 }
